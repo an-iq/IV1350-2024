@@ -55,8 +55,8 @@ The project is structured according to the Model-View-Controller (MVC) and Layer
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/yourusername/POS_System.git
-    cd POS_System
+    git clone [https://github.com/an-iq/IV1350-2024.git]
+    cd example
     ```
 
 2. **Compile the project**:
