@@ -1,6 +1,5 @@
 # IV1350-2024
-# Seminar 4
-# Point-of-Sale (POS) System
+# Seminar 4 - Point-of-Sale (POS) System
 
 ## Introduction
 
