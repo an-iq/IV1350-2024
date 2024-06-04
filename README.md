@@ -16,7 +16,7 @@ The project is structured according to the Model-View-Controller (MVC) and Layer
 
 - **Objective**: Implement the basic flow, startup scenario, and alternative flow 3-4b from the requirements.
 - **Approach**:
-  - **Model Layer**: Contains `Item` and `Sale` classes.
+  - **Model Layer**: Contains `Item`, `Sale`, and `Receipt` classes.
   - **Integration Layer**: Contains `InventorySystem` and `AccountingSystem` classes.
   - **Controller Layer**: Contains `Controller` class.
   - **View Layer**: Contains `View` class for simulating user interactions.
