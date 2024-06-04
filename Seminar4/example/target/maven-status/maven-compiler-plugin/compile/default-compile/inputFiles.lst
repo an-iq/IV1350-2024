@@ -1,0 +1,13 @@
+/Users/aniqaminhas/Desktop/example/src/main/java/com/example/POS_System/model/Item.java
+/Users/aniqaminhas/Desktop/example/src/main/java/com/Main.java
+/Users/aniqaminhas/Desktop/example/src/main/java/com/example/POS_System/integration/AccountingSystem.java
+/Users/aniqaminhas/Desktop/example/src/main/java/com/example/POS_System/view/TotalRevenueFileOutput.java
+/Users/aniqaminhas/Desktop/example/src/main/java/com/example/POS_System/controller/Controller.java
+/Users/aniqaminhas/Desktop/example/src/main/java/com/example/POS_System/observer/SaleObserver.java
+/Users/aniqaminhas/Desktop/example/src/main/java/com/example/POS_System/model/Receipt.java
+/Users/aniqaminhas/Desktop/example/src/main/java/com/example/POS_System/exceptions/DatabaseFailureException.java
+/Users/aniqaminhas/Desktop/example/src/main/java/com/example/POS_System/model/Sale.java
+/Users/aniqaminhas/Desktop/example/src/main/java/com/example/POS_System/exceptions/ItemNotFoundException.java
+/Users/aniqaminhas/Desktop/example/src/main/java/com/example/POS_System/integration/InventorySystem.java
+/Users/aniqaminhas/Desktop/example/src/main/java/com/example/POS_System/view/View.java
+/Users/aniqaminhas/Desktop/example/src/main/java/com/example/POS_System/view/TotalRevenueView.java
