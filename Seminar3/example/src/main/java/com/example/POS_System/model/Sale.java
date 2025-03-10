@@ -54,5 +54,14 @@ public class Sale {
         items.removeIf(item -> item.getIdentifier().equals(identifier));
         updateTotals();
     }
+
+    public String pay(double amountPaid) {
+        this.paidAmount = amountPaid;
+        if (paidAmount >= getTotalPrice()) {
+            double change = paidAmount - getTotalPrice();
+            return "Payment successful! Change: " + change;
+        }
+        return "Insufficient payment!";
+    }
     
 }
