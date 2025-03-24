@@ -48,6 +48,10 @@ public class View {
 
         // Ending the sale
         controller.endSale();
+        
+        // Amount paid 
+        controller.pay(50.0);
+
 
         // Printing the receipt
         controller.printReceipt();

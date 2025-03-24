@@ -36,6 +36,10 @@ public class Controller {
         System.out.println("Total price: " + totalPrice);
     }
 
+    public String pay(double amountPaid) {
+        return sale.pay(amountPaid);
+    }
+
     public void logSale() {
         accountingSystem.logSale(sale);
         inventorySystem.updateInventory(sale);
