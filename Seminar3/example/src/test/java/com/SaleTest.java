@@ -61,7 +61,8 @@ public class SaleTest {
     public void testAddNewItem() {
         sale.addItem(item1);
         assertEquals(1, sale.getItems().length);
-        assertEquals(item1.getIdentifier(), sale.getItems()[0].getIdentifier());
+        assertEquals("001", sale.getItems()[0].getIdentifier());
+        assertEquals(1, sale.getItems()[0].getQuantity());
     }
 
     @Test
@@ -78,7 +79,15 @@ public class SaleTest {
     sale.addItem(item2);
     sale.removeItem(item1.getIdentifier());
     assertEquals(1, sale.getItems().length);
-    assertEquals(item2.getIdentifier(), sale.getItems()[0].getIdentifier());
+    assertEquals("002", sale.getItems()[0].getIdentifier());
+    }
+
+    public void testTotalPriceIncludesVAT(){
+        sale.addItem(item1);
+        sale.addItem(item2);
+
+        double expectedTotal= 11.2 + 22.4;
+        assertEquals(expectedTotal, sale.getTotalPrice(), 0.001);
     }
 
 }

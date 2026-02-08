@@ -21,7 +21,7 @@ public class Controller {
         this.sale = new Sale();
     }
 
-    public void enterItem(String identifier) {
+    /* public void enterItem(String identifier) {
         Item item = inventorySystem.getItem(identifier);
         if (item != null) {
             sale.addItem(item);
@@ -29,19 +29,37 @@ public class Controller {
         } else {
             System.out.println("Invalid item identifier.");
         }
-    }
+    } */
 
-    public void endSale() {
+        // Fix enter item to match new logic from Sale.
+        public Item enterItem(String identifier) {
+            Item item = inventorySystem.getItem(identifier);
+            if (item != null){
+                sale.addItem(item);
+            }
+            return item;
+        }
+
+   /*  public void endSale() {
         double totalPrice = sale.getTotalPrice();
         System.out.println("Total price: " + totalPrice);
-    }
+    } */
+
+        // change endSale to follow MVC
+        public double endSale(){
+            return sale.getTotalPrice();
+        } 
 
     public String pay(double amountPaid) {
         return sale.pay(amountPaid);
     }
 
-    public void logSale() {
-        accountingSystem.logSale(sale);
+    public String logSale() {
+        return accountingSystem.getSaleLog(sale);
+       // inventorySystem.updateInventory(sale);
+    }
+
+    public void updateInventory(){
         inventorySystem.updateInventory(sale);
     }
 
@@ -50,7 +68,11 @@ public class Controller {
         receipt.printReceipt();
     } */
 
-    public void printReceipt() {
+     /*    public boolean updateInventory() {
+            return inventorySystem.updateInventory(sale);
+        } */
+
+    /* public void printReceipt() {
         System.out.println("Printing receipt...");
         System.out.println("Receipt:");
         System.out.println("Date: " + sale.getDateTime());
@@ -58,6 +80,11 @@ public class Controller {
             System.out.println(item.getDescription() + " x" + item.getQuantity() + ": " + (item.getPrice() * item.getQuantity() * (1 + item.getVATRate())));
         }
         System.out.println("Total: " + sale.getTotalPrice());
-    }
+    } */
+
+   // Change printReceipt because it breaks the MVC
+   public Receipt getReceipt() {
+    return new Receipt(sale);
+   }
     
 }

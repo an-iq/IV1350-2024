@@ -19,7 +19,7 @@ public class InventorySystem {
     }
 
     // Simulate updating inventory
-    public void updateInventory(Sale sale) {
+    /* public void updateInventory(Sale sale) {
         for (Item soldItem : sale.getItems()) {
             Item inventoryItem = items.get(soldItem.getIdentifier());
             if (inventoryItem != null) {
@@ -34,8 +34,25 @@ public class InventorySystem {
                 System.out.println("Warning: Sold item " + soldItem.getDescription() + " not found in inventory.");
             }
         }
-    }
+    } */
+
+// New function for simulating updating inventory after removing system.out.println. Instead of printing warning, the function returns information.
+        public boolean updateInventory(Sale sale){
+            boolean allItemsFound = true;
+            for (Item soldItem : sale.getItems()){
+                Item inventoryItem = items.get(soldItem.getIdentifier());
+
+                if(inventoryItem == null){
+                    allItemsFound = false;
+                    continue;
+                }
+                int newQuantity = inventoryItem.getQuantity() - soldItem.getQuantity();
+                inventoryItem.setQuantity(Math.max(newQuantity, 0));
+            }
+            return allItemsFound;
+        }
     
+
     public void addItem(Item item) {
         items.put(item.getIdentifier(), item);
     }

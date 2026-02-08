@@ -9,6 +9,7 @@ public class Sale {
     private double totalPrice;
     private double totalVAT;
     private LocalDateTime dateTime;
+    public double amountPaid;
 
     public Sale() {
         this.items = new ArrayList<>();
@@ -17,7 +18,7 @@ public class Sale {
         this.dateTime = LocalDateTime.now();
     }
 
-    public void addItem(Item item) {
+   /*  public void addItem(Item item) {
         for (Item existingItem : items) {
             if (existingItem.getIdentifier().equals(item.getIdentifier())) {
                 existingItem.increaseQuantity(item.getQuantity());
@@ -27,7 +28,26 @@ public class Sale {
         }
         items.add(item);
         updateTotals();
-    }
+    } */
+
+        // Change the addItem function to store inventory items directly.
+        public void addItem(Item inventoryItem){
+            for(Item existingItem : items){
+                if(existingItem.getIdentifier().equals(inventoryItem.getIdentifier())){
+                    existingItem.increaseQuantity(1);
+                    updateTotals();
+                    return;
+                }
+            }
+
+            Item soldItem = new Item(inventoryItem.getIdentifier(), 
+            inventoryItem.getDescription(),inventoryItem.getPrice(), inventoryItem.getVATRate());
+            
+            soldItem.increaseQuantity(0);
+            items.add(soldItem);
+            updateTotals();
+        }
+         
 
     private void updateTotals() {
         totalPrice = 0;
@@ -56,12 +76,17 @@ public class Sale {
     }
 
     public String pay(double amountPaid) {
-        this.paidAmount = amountPaid;
-        if (paidAmount >= getTotalPrice()) {
-            double change = paidAmount - getTotalPrice();
-            return "Payment successful! Change: " + change;
+        this.amountPaid = amountPaid;
+        if (amountPaid >= getTotalPrice()) {
+            double change = amountPaid - getTotalPrice();
+            return "" + change;
         }
         return "Insufficient payment!";
+    }
+
+    // getter to display amount paid on receipt.
+    public double getAmountPaid(){
+        return amountPaid;
     }
     
 }
