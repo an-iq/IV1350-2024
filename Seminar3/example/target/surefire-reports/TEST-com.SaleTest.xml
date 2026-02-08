@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.SaleTest" time="0.028" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.SaleTest" time="0.022" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="SE"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/21.0.3/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/aniqaminhas/Documents/GitHub/iv1351/IV1350-2024/Seminar3/example/target/surefire/surefirebooter13595228441193341335.jar /Users/aniqaminhas/Documents/GitHub/iv1351/IV1350-2024/Seminar3/example/target/surefire 2026-02-08T21-24-00_967-jvmRun1 surefire11776533467084507071tmp surefire_08910215440943433234tmp"/>
+    <property name="sun.java.command" value="/Users/aniqaminhas/Documents/GitHub/iv1351/IV1350-2024/Seminar3/example/target/surefire/surefirebooter1276823359093406374.jar /Users/aniqaminhas/Documents/GitHub/iv1351/IV1350-2024/Seminar3/example/target/surefire 2026-02-08T22-02-51_127-jvmRun1 surefire1396640383538737264tmp surefire_05977475531331425194tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/aniqaminhas/Documents/GitHub/iv1351/IV1350-2024/Seminar3/example/target/test-classes:/Users/aniqaminhas/Documents/GitHub/iv1351/IV1350-2024/Seminar3/example/target/classes:/Users/aniqaminhas/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/Users/aniqaminhas/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/aniqaminhas/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/Users/aniqaminhas/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/aniqaminhas/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/Users/aniqaminhas/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/aniqaminhas/Documents/GitHub/iv1351/IV1350-2024/Seminar3/example/target/surefire/surefirebooter13595228441193341335.jar"/>
+    <property name="surefire.real.class.path" value="/Users/aniqaminhas/Documents/GitHub/iv1351/IV1350-2024/Seminar3/example/target/surefire/surefirebooter1276823359093406374.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.3"/>
@@ -58,7 +58,7 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testAddExistingItem" classname="com.SaleTest" time="0.018"/>
-  <testcase name="testAddNewItem" classname="com.SaleTest" time="0"/>
+  <testcase name="testAddExistingItem" classname="com.SaleTest" time="0.017"/>
+  <testcase name="testAddNewItem" classname="com.SaleTest" time="0.001"/>
   <testcase name="testRemoveItem" classname="com.SaleTest" time="0.001"/>
 </testsuite>
